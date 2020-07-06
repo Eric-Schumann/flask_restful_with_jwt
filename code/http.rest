@@ -1,0 +1,48 @@
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "username": "joe",
+    "password": "asdf"
+}
+
+###
+
+POST http://localhost:5000/auth
+Content-Type: application/json
+
+{
+    "username": "joe",
+    "password": "asdf"
+}
+
+###
+
+GET http://localhost:5000/items
+
+###
+
+GET http://localhost:5000/item/apple
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTQwMDMzNzcsImlhdCI6MTU5NDAwMzA3NywibmJmIjoxNTk0MDAzMDc3LCJpZGVudGl0eSI6MX0.D2CBw7U7jlwvY6mt0esQKCp2cvF9Ikw8kQfJAU526BM
+
+###
+
+POST http://localhost:5000/item/juice
+Content-Type: application/json
+
+{
+    "price": 1.99
+}
+
+###
+
+PUT http://localhost:5000/item/juice
+Content-Type: application/json
+
+{
+    "price": 99.99
+}
+
+###
+
+DELETE http://localhost:5000/item/juice
